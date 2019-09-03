@@ -12,6 +12,7 @@ export default {
     const inputEvents = getInputEvents(vnode)
 
     if (!inputEvents.length) {
+      // eslint-disable-next-line
       console.log('[v-lazy] no input events found during bind')
     }
 
