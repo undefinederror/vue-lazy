@@ -1,36 +1,37 @@
 {
-  "name": "vue-lazy",
+  "name": "vue-lazy-input",
   "version": "1.0.0",
   "description": "A VueJs directive for lazily binding @input events",
-
+  "author": "undefinederror <undefinederror@object.ninja>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/undefinederror/vue-lazy.git"
+    "url": "https://github.com/undefinederror/vue-lazy-input.git"
   },
-  "bugs": "https://github.com/undefinederror/vue-lazy/issues",
-
-  "main": "dist/vue-lazy.ssr.js",
-  "module": "dist/vue-lazy.esm.js",
-  "unpkg": "dist/vue-lazy.min.js",
-
+  "bugs": "https://github.com/undefinederror/vue-lazy-input/issues",
+  "keywords": [
+    "vue-lazy-input",
+    "vuejs",
+    "debounce",
+    "throttle",
+    "v-model"
+  ],
+  "main": "dist/vue-lazy-input.ssr.js",
+  "module": "dist/vue-lazy-input.esm.js",
+  "unpkg": "dist/vue-lazy-input.min.js",
   "files": [
     "dist/*",
-    "src/**/*.vue",
-    "!src/lib-dev.vue"
+    "src/*"
   ],
-
   "scripts": {
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
-
   "dependencies": {
     "lodash": "^4.17.15"
   },
-
   "devDependencies": {
     "cross-env": "^5.2.0",
     "minimist": "^1.2.0",

@@ -13,7 +13,7 @@ export default {
 
     if (!inputEvents.length) {
       // eslint-disable-next-line
-      console.log('[v-lazy] no input events found during bind')
+      console.log('[v-lazy-input] no input events found during bind')
     }
 
     inputEvents.map(handler => {

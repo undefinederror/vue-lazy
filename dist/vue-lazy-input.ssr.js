@@ -1,6 +1,6 @@
 'use strict';Object.defineProperty(exports,'__esModule',{value:true});var lodash=require('lodash');var _ = { throttle: lodash.throttle, debounce: lodash.debounce, get: lodash.get };
 
-var vueLazy = {
+var vueLazyInput = {
   bind: function bind(el, binding, vnode) {
     var type = ['debounce', 'throttle'].includes(binding.arg)
       ? binding.arg
@@ -14,6 +14,7 @@ var vueLazy = {
     var inputEvents = getInputEvents(vnode);
 
     if (!inputEvents.length) {
+      // eslint-disable-next-line
       console.log('[v-lazy-input] no input events found during bind');
     }
 
@@ -67,14 +68,13 @@ function getHelpers(vnode) {
     addListener: addListener,
     getInputEvents: getInputEvents
   }
-}/* eslint-disable import/prefer-default-export */var components = /*#__PURE__*/Object.freeze({lazy: vueLazy});// Import vue components
+}/* eslint-disable import/prefer-default-export */var components = /*#__PURE__*/Object.freeze({lazyInput: vueLazyInput});// Import vue components
 
 // install function executed by Vue.use()
 function install(Vue) {
   if (install.installed) { return; }
   install.installed = true;
   Object.keys(components).forEach(function (componentName) {
-    console.log(components);
     Vue.directive(componentName, components[componentName]);
   });
 }
@@ -94,4 +94,4 @@ if (typeof window !== 'undefined') {
 }
 if (GlobalVue) {
   GlobalVue.use(plugin);
-}exports.default=plugin;exports.lazy=vueLazy;
+}exports.default=plugin;exports.lazyInput=vueLazyInput;

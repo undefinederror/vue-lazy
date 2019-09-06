@@ -1,2 +1,2 @@
 /* eslint-disable import/prefer-default-export */
-export { default as lazy } from './vue-lazy.js';
+export { default as lazyInput } from './vue-lazy-input.js';

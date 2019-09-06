@@ -46,7 +46,7 @@ if (!argv.format || argv.format === 'es') {
   const esConfig = {
     ...baseConfig,
     output: {
-      file: 'dist/vue-lazy.esm.js',
+      file: 'dist/vue-lazy-input.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -70,7 +70,7 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-lazy.ssr.js',
+      file: 'dist/vue-lazy-input.ssr.js',
       format: 'cjs',
       name: 'VueLazy',
       exports: 'named',
@@ -97,7 +97,7 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-lazy.min.js',
+      file: 'dist/vue-lazy-input.min.js',
       format: 'iife',
       name: 'VueLazy',
       exports: 'named',

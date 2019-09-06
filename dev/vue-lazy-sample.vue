@@ -30,7 +30,7 @@ export default {
 </script>
 
 <template>
-  <div class="vue-lazy-sample">
+  <div class="vue-lazy-input-sample">
     <p>
       The counter is set to
       <b>{{counter}}</b>.
@@ -42,7 +42,7 @@ export default {
 </template>
 
 <style scoped>
-.vue-lazy-sample {
+.vue-lazy-input-sample {
   display: block;
   width: 400px;
   margin: 25px auto;
@@ -51,7 +51,7 @@ export default {
   text-align: center;
   padding: 25px;
 }
-.vue-lazy-sample p {
+.vue-lazy-input-sample p {
   margin: 0 0 1em;
 }
 </style>
