@@ -1,5 +1,5 @@
-import { throttle, debounce, get } from 'lodash'
-const _ = { throttle, debounce, get }
+import { throttle, debounce } from 'lodash'
+const _ = { throttle, debounce }
 
 export default {
   bind(el, binding, vnode) {
@@ -19,19 +19,13 @@ export default {
     inputEvents.map(handler => {
       removeListener('input', handler._wrapper || handler)
     })
-    addListener(
-      'input',
-      _[type](function (val) {
-        const oldVal = _.get(vnode.context, binding.expression)
-        if (oldVal !== val) {
-          inputEvents.map(x => { x(val) })
-        }
-      }, d),
-      false
-    )
+    addListener('input', _[type](function (val) {
+      inputEvents.map(x => { x(val) })
+    }, d), false)
   },
   unbind(el, binding, vnode) {
     const { removeListener, getInputEvents } = getHelpers(vnode)
+    
     getInputEvents(vnode).map(handler => {
       removeListener('input', handler)
     })
