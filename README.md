@@ -25,7 +25,7 @@ A Vue.js directive for lazily binding @input events (v-model)
 #### browser
 ```html
   <script src="https://unpkg.com/lodash/lodash.min.js"></script><!-- dependency -->
-  <script src="https://unpkg.com/vue-lazy-input/vue-lazy-input.min.js"></script>
+  <script src="https://unpkg.com/vue-lazy-input"></script>
 ```
 
 ---
