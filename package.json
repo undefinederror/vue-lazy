@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "A VueJs directive for lazily binding @input events",
   "author": "undefinederror <undefinederror@object.ninja>",
-  "license": "MIT",
+  "license": "WTFPL",
   "repository": {
     "type": "git",
     "url": "https://github.com/undefinederror/vue-lazy-input.git"
