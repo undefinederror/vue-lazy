@@ -17,7 +17,10 @@ export default {
     }
 
     inputEvents.map(handler => {
-      removeListener('input', handler._wrapper || handler)
+      removeListener('input', 
+      handler._wrapper || /** v >= 2.6.0 */ 
+      handler._withTask || /** 2.5.2 >= v > 2.6.0 */ 
+      handler /** v < 2.5.2*/ )
     })
     addListener('input', _[type](function (val) {
       inputEvents.map(x => { x(val) })
