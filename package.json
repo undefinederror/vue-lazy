@@ -1,6 +1,6 @@
 {
   "name": "vue-lazy-input",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A VueJs directive for lazily binding @input events",
   "author": "undefinederror <undefinederror@object.ninja>",
   "license": "WTFPL",
