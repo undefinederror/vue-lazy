@@ -1,13 +1,14 @@
 <script>
-import { lazy } from '../src/entry'
-import VueLazySample from './vue-lazy-input-sample.vue';
+import { lazyInput } from '../src/entry'
+import VueLazyInputSample from './vue-lazy-input-sample.vue';
+
 export default {
   name: 'VueLazyLibDev', // vue library dev component
   components: {
-    VueLazySample,
+    VueLazyInputSample,
   },
   directives: {
-    lazy
+    lazyInput
   },
   data() {
     return {
