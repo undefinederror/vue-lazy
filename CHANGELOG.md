@@ -1,5 +1,5 @@
   
-# v2.0.0
+# v1.1.0
   ---
   ### Improved
   - Directive rebinds on arg and value updates
