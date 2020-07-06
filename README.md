@@ -42,7 +42,7 @@ v-lazy-input must be coupled with either a **v-model** directive or an **@input*
 v-lazy-input:[type]="duration"
 ```
 
-**type** is either _debounce_ or _throttle_, default is _debounce_.
+**type** is either _debounce_, _throttle_ or _sync_ (fires immediately), default is _debounce_.
 
 **duration** is a number, default is _500_.
 
